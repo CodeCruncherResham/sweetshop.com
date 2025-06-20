@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        width: 100%;
+        height: 50px;
+        float: left;
+        box-sizing: border-box;
+        padding: 6px;
+      }
+      #brand_name {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        float: left;
+        margin-left: 24px;
+      }
+      #tag_line {
+        float: right;
+        margin: 0;
+        padding: 0;
+        margin-top: 10px;
+        font-family: century gothic;
+      }
+      nav {
+        width: 100%;
+        height: 106px;
+        background-color: blue;
+        float: left;
+        box-sizing: border-box;
+        padding: 30px;
+      }
+      #search {
+        width: 400px;
+        height: 40px;
+        float: left;
+        box-sizing: border-box;
+        border: none;
+        font-size: 15px;
+        padding: 10px;
+      }
+      #search_btn {
+        width: 100px;
+        height: 40px;
+        float: left;
+        box-sizing: border-box;
+        border: none;
+        margin-left: 3px;
+        font-size: 16px;
+      }
+      #menu_table {
+        width: 600px;
+        height: 40px;
+        float: right;
+        box-sizing: border-box;
+      }
+      #menu_item {
+        background-color: white;
+        width: 20%;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif;
+      }
+      section {
+        width: 100%;
+        height: 1680px;
+        float: left;
+        box-sizing: border-box;
+        border-width: 1px;
+        border-style: solid;
+        border-color: blue;
+        padding: 30px;
+      }
+      #venue {
+        float: left;
+      }
+      #phone {
+        float: right;
+      }
+      #popular_sweet_box {
+        width: 700px;
+        height: 550px;
+        box-sizing: border-box;
+        background-color: black;
+        margin-top: 30px;
+        padding: 25px;
+      }
+
+      #popular_sweet_title {
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      #popular_sweet_img {
+        width: 25%;
+        height: 200px;
+        margin: 25px;
+        border-width: 5px;
+        border-color: azure;
+        border-style: solid;
+        box-sizing: border-box;
+      }
+      #rate_list_box {
+        width: 600px; /* Increased width to match the popular sweet box */
+        height: 592px;
+        float: right; /* Changed from float: right */
+        box-sizing: border-box;
+        margin-top: -570px; /* Adjusted to move above */
+        padding: 20px;
+        margin-right: -18px;
+        clear: left; /* Added */
+      }
+      #rate_headder {
+        height: 50px;
+        background-color: black;
+        color: antiquewhite;
+        text-align: center;
+        font-family: century gothic;
+        font-size: 25px;
+      }
+      #rate_contain {
+        background-color: blue;
+      }
+      #s_name {
+        color: antiquewhite;
+        font-family: century gothic;
+        font-size: 22px;
+        padding: 10px;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: bisque;
+        text-align: center;
+      }
+
+      #rate {
+        list-style: none;
+      }
+      fieldset {
+        width: 675px;
+        height: 550px;
+        float: left;
+        margin-top: 50px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+        padding: 10px;
+      }
+      legend {
+        font-family: century gothic;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      #order_online {
+        font-size: 17px;
+        font-family: sans-serif;
+      }
+      #order_input {
+        width: 100%;
+        height: 35px;
+        box-sizing: border-box;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+        margin-top: 5px;
+      }
+      textarea {
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+      }
+      #submit_btn {
+        padding: 10px;
+        font-size: 15px;
+        float: right;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+        background-color: aliceblue;
+      }
+      #abt_us {
+        width: 560px;
+        height: 550px;
+        float: right;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+        margin-top: 50px;
+        margin-right: 6px;
+        box-sizing: border-box;
+        padding: 20px;
+      }
+      #abt_title {
+        text-align: center;
+        font-family: century gothic;
+        font-size: 30px;
+      }
+      #abt_txt {
+        text-align: justify;
+        font-family: sans-serif;
+        line-height: 23px;
+      }
+      #m_sweet {
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      #more_sweet {
+        text-align: center;
+        font-family: century gothic;
+        font-size: 30px;
+      }
+      #sweets {
+        width: 218px;
+        height: 250px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+        float: left;
+        margin-right: 74px;
+      }
+      #sweets_end {
+        width: 218px;
+        height: 250px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+        float: left;
+      }
+      #sweet_pic {
+        width: 180px;
+        height: 150px;
+        margin: 22px;
+      }
+      #buy_btn {
+        width: 100px;
+        padding: 10px;
+        font-size: 15px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+        background-color: aliceblue;
+      }
+      footer {
+        width: 100%;
+        height: 250px;
+        box-sizing: border-box;
+        float: left;
+        background-color: black;
+      }
+      #contact_us {
+        width: 300px;
+        height: 250px;
+        box-sizing: border-box;
+        float: left;
+        padding: 10px;
+        padding-left: 25px;
+      }
+      #social_link {
+        width: 300px;
+        height: 250px;
+        box-sizing: border-box;
+        float: right;
+      }
+      #contact_title {
+        color: azure;
+        font-family: sans-serif;
+      }
+      #contact_detail {
+        color: white;
+        font-size: 20px;
+        font-family: sans-serif;
+        font-style: normal;
+        margin-bottom: 10px;
+      }
+      #social_logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 360px;
+      }
+      #developer {
+        float: left;
+        color: white;
+        font-family: century gothic;
+        margin-top: 200px;
+        margin-left: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="brand_name">Sweetshop.com</h1>
+      <p id="tag_line">The world's largest Sweet & bakeries shop</p>
+    </header>
+    <nav>
+      <form>
+        <input
+          type="search"
+          name="search"
+          placeholder="search your sweet here"
+          id="search"
+        />
+        <input type="submit" id="search_btn" value="search" />
+      </form>
+      <table id="menu_table">
+        <tr>
+          <td id="menu_item"><a href="index.html">Home</a></td>
+          <td id="menu_item"><a href="sweets.html">Sweets</a></td>
+          <td id="menu_item"><a href="bakeries.html">Bakeries</a></td>
+          <td id="menu_item"><a href="#abt_us">About us</a></td>
+          <td id="menu_item"><a href="#contact_us">Contact us</a></td>
+        </tr>
+      </table>
+    </nav>
+    <section>
+      <address id="venue">Venue:Civic Center,Bhilai,Distt-Durg(C.G.)</address>
+      <address id="phone">Order Online : +91 1234567890</address>
+      <div id="popular_sweet_box">
+        <h1 id="popular_sweet_title">Our Popular Sweets</h1>
+        <img src="images/a.jpg" alt="th_15" id="popular_sweet_img" />
+        <img src="images/b.jpg" alt="4h_23" id="popular_sweet_img" />
+        <img src="images/c.jpeg" alt="6h_24" id="popular_sweet_img" />
+        <img src="images/d.jpeg" alt="th_6" id="popular_sweet_img" />
+        <img src="images/e.jpeg" alt="th_6" id="popular_sweet_img" />
+        <img src="images/f.jpeg" alt="th_6" id="popular_sweet_img" />
+      </div>
+      <table id="rate_list_box">
+        <tr>
+          <td id="rate_headder">Sweet Name</td>
+          <td id="rate_headder">Sweet Price</td>
+        </tr>
+        <tr>
+          <td id="rate_contain">
+            <ol>
+              <li id="s_name">Kaju Katli</li>
+              <li id="s_name">Barfi</li>
+              <li id="s_name">Gulab Jamun</li>
+              <li id="s_name">Imarti</li>
+              <li id="s_name">Modak</li>
+              <li id="s_name">Kalakand</li>
+              <li id="s_name">Besan Laddu</li>
+              <li id="s_name">Rasmalai</li>
+              <li id="s_name">Rasgula</li>
+            </ol>
+          </td>
+          <td id="rate_contain">
+            <ol id="rate">
+              <li id="s_name">200/kg</li>
+              <li id="s_name">200/kg</li>
+              <li id="s_name">200/kg</li>
+              <li id="s_name">200/kg</li>
+              <li id="s_name">200/kg</li>
+              <li id="s_name">200/kg</li>
+              <li id="s_name">200/kg</li>
+              <li id="s_name">200/kg</li>
+              <li id="s_name">200/kg</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+      <fieldset id="frm_box">
+        <legend>Order Online</legend>
+        <form id="order_online">
+          Buyer Name <br />
+          <input type="text" type="name" id="order_input" /><br /><br />
+          Mobile No.<br />
+          <input type="number" type="mobile" id="order_input" /><br /><br />
+          Choose Sweets<br />
+          <select name="choose_sweets" id="order_input">
+            <option value="Kaju Katli">Kaju Katli</option>
+            <option value="Barfi">Barfi</option>
+            <option value="Gulab Jamun">Gulab Jamun</option>
+            <option value="Imarti">Imarti</option>
+            <option value="Modak">Modak</option>
+            <option value="Kalakand">Kalakand</option>
+            <option value="Besan Ladu">Besan Ladu</option>
+            <option value="Rasmalai">Rasmalai</option>
+            <option value="Rasgula">Rasgula</option>
+          </select>
+          <br /><br />
+          Quantity<br />
+          <input type="text" name="Quantity" id="order_input" />
+          <br /><br />
+          Address<br />
+          <textarea name="address"></textarea>
+          <br /><br />
+          <input type="submit" value="order now" id="submit_btn" />
+        </form>
+      </fieldset>
+      <div id="abt_us">
+        <h1 id="abt_title">About Us</h1>
+        <hr />
+        <p id="abt_txt">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil vero
+          possimus numquam velit quaerat animi odio nemo eaque corporis saepe
+          laborum perspiciatis fuga omnis accusamus, magnam ducimus veritatis
+          repellendus nam. Est laborum eaque tenetur molestiae vero deserunt
+          nulla, nisi, dignissimos, eligendi facilis cum voluptate perspiciatis!
+          Mollitia, dolores facilis, totam in maxime enim labore blanditiis
+          assumenda, velit magni quae laborum fugit? Impedit soluta est
+          laboriosam neque sed commodi deleniti debitis voluptas alias unde!
+          Illum, dignissimos itaque asperiores nostrum atque ullam, ducimus
+          perspiciatis soluta voluptas odio temporibus, ipsa laboriosam eius
+          iure harum! Repellendus, aut libero. Maiores, sint. Enim nam
+          reprehenderit laboriosam alias natus nisi, delectus aspernatur fugit
+          ut, magnam voluptate soluta laudantium harum eos accusantium
+          voluptatibus dignissimos recusandae suscipit dolorum asperiores
+          aperiam? Nostrum deserunt laborum, aliquam atque numquam accusantium
+          excepturi ipsa vero reiciendis temporibus iusto ipsum. Ducimus
+          voluptates soluta voluptate esse! Adipisci mollitia commodi ad
+          deleniti asperiores sint, veritatis impedit placeat quis.
+        </p>
+      </div>
+      <div id="m_sweet">
+        <h1 id="more_sweet">More Sweets</h1>
+        <div id="sweets">
+          <img src="images/a.jpg" alt="" id="sweet_pic" />
+          <center>
+            <a href="#frm_box">
+              <button id="buy_btn">Buy Now</button>
+            </a>
+          </center>
+        </div>
+        <div id="sweets">
+          <img src="images/b.jpg" alt="" id="sweet_pic" />
+          <center>
+            <a href="#frm_box">
+              <button id="buy_btn">Buy Now</button>
+            </a>
+          </center>
+        </div>
+        <div id="sweets">
+          <img src="images/c.jpeg" alt="" id="sweet_pic" />
+          <center>
+            <a href="#frm_box">
+              <button id="buy_btn">Buy Now</button>
+            </a>
+          </center>
+        </div>
+        <div id="sweets">
+          <img src="images/d.jpeg" alt="" id="sweet_pic" />
+          <center>
+            <a href="#frm_box">
+              <button id="buy_btn">Buy Now</button>
+            </a>
+          </center>
+        </div>
+        <div id="sweets_end">
+          <img src="images/e.jpeg" alt="" id="sweet_pic" />
+          <center>
+            <a href="#frm_box">
+              <button id="buy_btn">Buy Now</button>
+            </a>
+          </center>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div id="contact_us">
+        <h1 id="contact_title">Contact Us</h1>
+        <address id="contact_detail">Website : sweetshop.com</address>
+        <address id="contact_detail">Phone No : +91 1234567890</address>
+        <address id="contact_detail">Email Id : abc@gmail.com</address>
+        <address id="contact_detail">
+          Address : Civic Center,Bhilai,Distt-Durg(C.G.)
+        </address>
+      </div>
+      <div id="developer">Developed By : Resham</div>
+      <div id="social_link">
+        <h1 id="contact_title">Follow Us</h1>
+        <a href="#">
+          <img src="images/fb1.jpeg" alt="facebook" id="social_logo" />
+        </a>
+        <a href="#">
+          <img src="images/li1.jpeg" alt="linkedin" id="social_logo" />
+        </a>
+        <a href="#">
+          <img src="images/tw.jpeg" alt="twitter" id="social_logo" />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
